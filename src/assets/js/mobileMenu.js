@@ -1,4 +1,4 @@
-const displayMenu = () => {
+export const displayMenu = () => {
   //Create navigation menu element
   const menuMobile = document.createElement("nav");
   menuMobile.id = "mobile-menu-content";
@@ -31,11 +31,7 @@ const displayMenu = () => {
     .addEventListener("click", removeMenu);
 };
 
-const removeMenu = () => {
+export const removeMenu = () => {
   document.querySelector("#mobile-menu-content").remove();
   document.removeEventListener("click", removeMenu);
 };
-
-document
-  .querySelector("#mobile-menu-closed")
-  .addEventListener("click", displayMenu);
