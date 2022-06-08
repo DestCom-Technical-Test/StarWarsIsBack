@@ -1,6 +1,6 @@
 // Langage : javascript
 
-const offsetTop = (element, accumulator = 0) => {
+export const offsetTop = (element, accumulator = 0) => {
   if (element.offsetParent) {
     return offsetTop(element.offsetParent, accumulator + element.offsetTop);
   }
@@ -8,7 +8,7 @@ const offsetTop = (element, accumulator = 0) => {
 };
 
 //Script inspiré de https://www.youtube.com/watch?v=55NsKxpUYjQ
-class ParallaxObject {
+export class ParallaxObject {
   constructor(element, effectRatioX, effectRatioY) {
     this.element = element;
     this.effectRatioX = effectRatioX;
@@ -44,5 +44,3 @@ class ParallaxObject {
     });
   };
 }
-
-ParallaxObject.bind();
