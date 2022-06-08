@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#mobile-menu-closed {
+  display: none;
+}
+
+a {
+  all: unset;
+}
+
+header {
+  background-image: url("../img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+
+header > nav {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 100%;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header > nav > .background {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  background-color: #000000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+header > nav > a {
+  position: relative;
+  z-index: 2;
+  font-size: 0.7em;
+}
+
+header > nav > a:nth-child(2) {
+  margin-left: 10%;
+}
+header > nav > a:last-child {
+  margin-right: 10%;
+}
+
+header > img {
+  width: auto;
+  max-height: 60vh;
+  margin: auto auto 5% auto;
+}
+
+#newMovie {
+  width: 85%;
+  margin: auto;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  display: flex;
+  justify-content: space-around;
+}
+
+#newMovie > div:first-child {
+  width: 35%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#newMovie > div > h1 {
+  font-size: 1em;
+}
+
+#newMovie > div > p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* #newMovie > img {
+  width: 40%;
+} */
+
+#ad1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  width: 300px;
+  height: 600px;
+}
+
+#kylo-ren,
+#army {
+  width: 100%;
+}
+
+#army {
+  position: relative;
+  bottom: -5px;
+}
+
+#resume-saga {
+  width: 85%;
+  margin: auto;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+#resume-saga > h1 {
+  text-align: center;
+  font-size: 2.4em;
+}
+
+#resume-saga > div {
+  display: flex;
+  justify-content: space-around;
+  height: 31vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#resume-saga > div > img {
+  margin: 1em;
+  height: 100%;
+}
+
+#resume-saga > ul > li {
+  list-style-type: "- ";
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../img/darthvader.jpg");
+  background-color: #181818;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: grey;
+  min-height: 25vh;
+  margin: auto;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer > div > div {
+  width: 20%;
+}
+
+footer > div > div > p {
+  margin: 0.5em;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+footer > div > div > p:not(.follow) {
+  text-decoration: underline;
+}
+
+footer > div > div > div {
+  display: flex;
+  justify-content: center;
+}
+
+footer > div > div > div > img {
+  margin: 5%;
+}
+
+footer > div > div > div > img:last-child {
+  filter: invert(50%);
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 50vh;
+  }
+
+  body > header > nav {
+    display: none;
+  }
+
+  header > img {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  #mobile-menu-closed {
+    display: block;
+    height: 7vh;
+    width: auto;
+    position: absolute;
+    right: 5%;
+    top: 6%;
+  }
+
+  #mobile-menu-closed > img {
+    height: 75%;
+    filter: invert(1);
+    margin: auto;
+  }
+
+  #ad1 {
+    display: none;
+  }
+
+  #newMovie {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #newMovie > div:first-child {
+    width: 90%;
+  }
+
+  #kylo-ren {
+    width: 185%;
+    overflow: hidden;
+    position: relative;
+    left: -35%;
+  }
+
+  #resume-saga {
+    padding: 0;
+    overflow: hidden;
+    height: 131%;
+  }
+
+  #resume-saga > div {
+    display: flex;
+    justify-content: unset;
+    flex-direction: column;
+    height: auto;
+  }
+
+  #resume-saga > h1 {
+    font-size: 2em;
+  }
+
+  #resume-saga > ul {
+    display: none;
+  }
+
+  #army {
+    width: 262%;
+    overflow: hidden;
+    position: relative;
+    left: -81%;
+  }
+
+  footer > p {
+    display: none;
+  }
+  footer > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unset;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  footer > div > div {
+    width: 50%;
+  }
+
+  footer > div > div:last-child {
+    margin-top: 1.2em !important;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+
+  .img-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-image: url("../img/header-bg.png");
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  #mobile-menu-content > div:first-child {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+
+  #mobile-menu-content > div > img {
+    filter: invert(1);
+  }
+
+  #mobile-menu-content > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    line-height: 4;
+  }
+}
