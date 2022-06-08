@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/assets/js/main.js"),
@@ -26,6 +27,10 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, "./"),
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin(),

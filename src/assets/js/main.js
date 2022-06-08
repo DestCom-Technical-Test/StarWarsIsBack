@@ -1,3 +1,5 @@
+import css from "../styles/main.css";
+
 import { displayMenu } from "./mobileMenu.js";
 import { ParallaxObject } from "./parallaxe.js";
 
